@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+    <title>Whitewash Web</title>
+    <style type="text/css" media="screen">
+        form { float: left; margin-right: 10px; font-size: 20px; }
+        label { display: block; font-weight: bold; font-size: 22px;}
+        textarea { font-size: 18px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+    //<![CDATA[
+    $(function(){
+            var $form = $('form')
+            var $results = $('#results')
+
+            $('form').on('submit', function(event){ 
+                event.preventDefault()
+                var $form = $(event.target)
+                var text = $form.find('textarea').val()
+                var action = $form.attr('action')
+                var $results_location = $( $form.attr('data-results-location') )
+                $.get(action, {text: text}, function(results){ $results_location.val(results) })
+            })
+    })
+    //]]>
+    </script>
+    </head>
+
+    <body>
+
+        <form id='wash_form' action="/wash" method="get" data-results-location="#washed_text" accept-charset="utf-8">
+          <label for="unwashed_text">Unwashed Text:</label>
+          <textarea id="unwashed_text" rows="8" cols="40"></textarea>
+          <p><input type="submit" value="Wash &rarr;"/></p>
+        </form>
+
+        <form id='unwash_form' action="/unwash" method="get" data-results-location="#unwashed_text" accept-charset="utf-8">
+          <label for="washed_text">Washed Text:</label>
+          <textarea id="washed_text" rows="8" cols="40"></textarea>
+          <p><input type="submit" value="Unwash &larr;"/></p>
+        </form>
+
+    </body>
+</html>

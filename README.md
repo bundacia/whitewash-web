@@ -1,6 +1,6 @@
 # Whitewash Web
 
-A Web app for encoding text as whitespace using [whitewash](https://github.com/bundacia/whitewash-web).
+A Web app for encoding text as whitespace using [whitewash](https://github.com/bundacia/whitewash).
 
 ## Prerequisites
 

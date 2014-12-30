@@ -1,5 +1,5 @@
 (defproject whitewash-web "0.1.0-SNAPSHOT"
-  :description "Web app for encoding text as whitespace"
+  :description "A web app for encoding text as whitespace"
   :url "http://whitewash-web.herokuapp.com"
   :license {:name "MIT License"
             :url "http://www.opensource.org/licenses/MIT"}

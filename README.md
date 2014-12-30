@@ -1,6 +1,6 @@
-# whitewash-web
+# Whitewash Web
 
-FIXME
+A Web app for encoding text as whitespace
 
 ## Prerequisites
 
@@ -16,4 +16,4 @@ To start a web server for the application, run:
 
 ## License
 
-Copyright © 2014 FIXME
+Whitewash Web is released under the [MIT License](http://www.opensource.org/licenses/MIT).
